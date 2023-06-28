@@ -13,7 +13,7 @@ const extractToken = (headers) => {
 
 // post new room
 exports.createRoomActivity = async (req, res) => {
-  const { roomName } = req.body;
+  const { roomName } = req.body ;
   const token = extractToken(req.headers);
 
   try {
@@ -114,7 +114,6 @@ exports.deleteRoom = async (req, res) => {
       if (!data) {
         res.status(404).json({ message: "Data not found" });
       }
-
       res.json({ message: "Success delete data" });
     } else {
       res.status(401).json({ message: "Token not found" });
