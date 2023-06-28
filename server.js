@@ -4,7 +4,7 @@ const dotenv = require("dotenv"); //require dotenv package
 dotenv.config({ path: "./config.env" }); //import config.env file
 const mongoose = require("mongoose");
 const userRouter = require("./App/routes/UserRouter");
-const activityRouter = require("./App/routes/ActivityRouter");
+const activityRouter = require("../TimeAce-BackEnd/App/routes/ActivityRouter");
 const todoListRouter = require("./App/routes/TodoListRouter")
 const PORT = process.env.PORT || 3000;
 const app = express();
